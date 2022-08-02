@@ -18,20 +18,20 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/chainconfig"
-	"github.com/ignite/cli/ignite/pkg/availableport"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/cosmosfaucet"
-	"github.com/ignite/cli/ignite/pkg/gocmd"
-	"github.com/ignite/cli/ignite/pkg/httpstatuschecker"
-	"github.com/ignite/cli/ignite/pkg/xexec"
-	"github.com/ignite/cli/ignite/pkg/xurl"
+	"github.com/ignite/cli/baseclass/chainconfig"
+	"github.com/ignite/cli/baseclass/pkg/availableport"
+	"github.com/ignite/cli/baseclass/pkg/cmdrunner"
+	"github.com/ignite/cli/baseclass/pkg/cmdrunner/step"
+	"github.com/ignite/cli/baseclass/pkg/cosmosfaucet"
+	"github.com/ignite/cli/baseclass/pkg/gocmd"
+	"github.com/ignite/cli/baseclass/pkg/httpstatuschecker"
+	"github.com/ignite/cli/baseclass/pkg/xexec"
+	"github.com/ignite/cli/baseclass/pkg/xurl"
 )
 
 const (
 	ServeTimeout = time.Minute * 15
-	IgniteApp    = "ignite"
+	IgniteApp    = "baseclass"
 	ConfigYML    = "config.yml"
 )
 
@@ -54,7 +54,7 @@ func New(t *testing.T) Env {
 	t.Cleanup(cancel)
 
 	if !xexec.IsCommandAvailable(IgniteApp) {
-		t.Fatal("ignite needs to be installed")
+		t.Fatal("baseclass needs to be installed")
 	}
 
 	return e

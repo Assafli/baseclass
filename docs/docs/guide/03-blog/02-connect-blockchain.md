@@ -90,7 +90,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	// account `alice` was initialized during `ignite chain serve`
+	// account `alice` was initialized during `baseclass chain serve`
 	accountName := "alice"
 
 	// get account from the keyring by account name and return a bech32 address

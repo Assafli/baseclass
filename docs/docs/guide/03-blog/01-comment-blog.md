@@ -34,7 +34,7 @@ To get the useful functions for this tutorial, you use the `ignite scaffold list
 2. To create the source code files to add CRUD (create, read, update, and delete) functionality for data stored as an array, run:
 
 ```bash
-ignite scaffold list comment --no-message creator:string title:string body:string postID:uint createdAt:int 
+baseclass scaffold list comment --no-message creator:string title:string body:string postID:uint createdAt:int 
 ```
 
 The `--no-message` flag disables CRUD interaction messages scaffolding because you will write your own messages.
@@ -81,7 +81,7 @@ message Comment {
 To create a new message that adds a comment to the existing post, run:
 
 ```bash
-ignite scaffold message create-comment postID:uint title body
+baseclass scaffold message create-comment postID:uint title body
 ```
 
 The `ignite scaffold message` command accepts `postID` and a list of fields as arguments. The fields are `title` and `body`.
@@ -301,7 +301,7 @@ By following these steps, you have implemented all of the code required to creat
 To create a message, use the `message` command:
 
 ```bash
-ignite scaffold message delete-comment commentID:uint postID:uint 
+baseclass scaffold message delete-comment commentID:uint postID:uint 
 ```
 
 The `message` commands accepts `commentID` and `postID` as arguments.
@@ -393,7 +393,7 @@ package keeper
 Implement logic to query existing posts:
 
 ```bash
-ignite scaffold query comments id:uint --response title,body
+baseclass scaffold query comments id:uint --response title,body
 ```
 
 Also in `proto/blog/query.proto`, make these updates:

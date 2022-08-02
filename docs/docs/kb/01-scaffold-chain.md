@@ -12,7 +12,7 @@ The `ignite scaffold chain` command scaffolds a new Cosmos SDK blockchain projec
 To build the planet application:
 
 ```bash
-ignite scaffold chain github.com/username/planet
+baseclass scaffold chain github.com/username/planet
 ```
 
 ## Directory structure
@@ -54,7 +54,7 @@ Account addresses on Cosmos SDK-based blockchains have string prefixes. For exam
 When you create a new blockchain, pass a prefix as a value to the `--address-prefix` flag:
 
 ```bash
-ignite scaffold chain github.com/username/planet --address-prefix moonlight
+baseclass scaffold chain github.com/username/planet --address-prefix moonlight
 ```
 
 Using the `moonlight` prefix, account addresses on your blockchain look like this: `moonlight12fjzdtqfrrve7zyg9sv8j25azw2ua6tvu07ypf`.

@@ -1,8 +1,8 @@
-project_name: ignite
+project_name: baseclass
 builds:
-  - main: ./ignite/cmd/ignite
+  - main: ./baseclass/cmd/baseclass
     ldflags:
-      - -s -w -X github.com/ignite/cli/ignite/version.Version={{.Tag}} -X github.com/ignite/cli/ignite/version.Date={{.Date}} -X github.com/ignite/cli/ignite/version.Head={{.FullCommit}}
+      - -s -w -X github.com/baseclass/cli/baseclass/version.Version={{.Tag}} -X github.com/baseclass/cli/baseclass/version.Date={{.Date}} -X github.com/baseclass/cli/baseclass/version.Head={{.FullCommit}}
     goos:
       - linux
       - darwin

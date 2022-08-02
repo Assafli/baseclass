@@ -13,10 +13,10 @@ import (
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner"
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
-	"github.com/ignite/cli/ignite/pkg/randstr"
-	"github.com/ignite/cli/ignite/pkg/xurl"
+	"github.com/ignite/cli/baseclass/pkg/cmdrunner"
+	"github.com/ignite/cli/baseclass/pkg/cmdrunner/step"
+	"github.com/ignite/cli/baseclass/pkg/randstr"
+	"github.com/ignite/cli/baseclass/pkg/xurl"
 	envtest "github.com/ignite/cli/integration"
 )
 

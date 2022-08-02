@@ -176,7 +176,7 @@ You have completed implementing the functions that are required for the `dex` mo
 To test if your Ignite CLI blockchain builds correctly, use the `chain build` command:
 
 ```bash
-ignite chain build
+baseclass chain build
 ```
 
 Again, it is a good time (a great time!) to add your state to the local GitHub repository:

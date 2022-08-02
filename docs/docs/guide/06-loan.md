@@ -77,7 +77,7 @@ A lender can approve a loan request from a borrower.
 Use Ignite CLI to scaffold a fully functional Cosmos SDK blockchain app named `loan`:
 
 ```bash
-ignite scaffold chain loan --no-module
+baseclass scaffold chain loan --no-module
 ```
 
 The `--no-module` flag prevents scaffolding a default module. Don't worry, you will add the loan module later.
@@ -93,7 +93,7 @@ cd loan
 Scaffold the module to create a new `loan` module. Following the Cosmos SDK convention, all modules are scaffolded inside the `x` directory:
 
 ```bash
-ignite scaffold module loan --dep bank
+baseclass scaffold module loan --dep bank
 ```
 
 Use the `--dep` flag to specify that this module depends on and is going to interact with the Cosmos SDK `bank` module.
@@ -103,7 +103,7 @@ Use the `--dep` flag to specify that this module depends on and is going to inte
 Use the [scaffold list](https://docs.ignite.com/cli/#ignite-scaffold-list) command to scaffold code necessary to store loans in an array-like data structure:
 
 ```bash
-ignite scaffold list loan amount fee collateral deadline state borrower lender --no-message
+baseclass scaffold list loan amount fee collateral deadline state borrower lender --no-message
 ```
 
 Use the `--no-message` flag to disable CRUD messages in the scaffold.
@@ -162,7 +162,7 @@ The first message is the `request-loan` message that  requires these input param
 * `deadline`
 
 ```bash
-ignite scaffold message request-loan amount fee collateral deadline
+baseclass scaffold message request-loan amount fee collateral deadline
 ```
 
 For the sake of simplicity, define every parameter as a string.
@@ -281,7 +281,7 @@ You can run the chain and test your first message.
 Start the blockchain:
 
 ```bash
-ignite chain serve
+baseclass chain serve
 ```
 
 Add your first loan:
@@ -329,7 +329,7 @@ The message `approve-loan` has one parameter, the `id`.
 Specify the type of `id` as `uint`. By default, ids are stored as `uint`.
 
 ```bash
-ignite scaffold message approve-loan id:uint
+baseclass scaffold message approve-loan id:uint
 ```
 
 This message must be available for all loan types that are in `"requested"` status.
@@ -418,7 +418,7 @@ var (
 Start the blockchain and use the two commands you already have available:
 
 ```bash
-ignite chain serve -r
+baseclass chain serve -r
 ```
 
 Use the `-r` flag to reset the blockchain state and start with a new database.
@@ -480,7 +480,7 @@ After the loan has been approved, the username must be able to repay an approved
 Scaffold the message `repay-loan` that a borrower uses to return tokens that were borrowed from the lender:
 
 ```bash
-ignite scaffold message repay-loan id:uint
+baseclass scaffold message repay-loan id:uint
 ```
 
 Repaying a loan requires that the loan is in `"approved"` status.
@@ -572,7 +572,7 @@ type BankKeeper interface {
 Start the blockchain and use the two commands you already have available:
 
 ```bash
-ignite chain serve -r
+baseclass chain serve -r
 ```
 
 Use the `-r` flag to reset the blockchain state and start with a new database:
@@ -641,7 +641,7 @@ git commit -m "Add repay-loan message"
 After the deadline is passed, a lender can liquidate a loan when the borrower does not repay the tokens. The message to `liquidate-loan` refers to the loan `id`:
 
 ```bash
-ignite scaffold message liquidate-loan id:uint
+baseclass scaffold message liquidate-loan id:uint
 ```
 
 * The `liquidate-loan` message must be able to be executed by the `lender`.
@@ -729,7 +729,7 @@ These changes are required for the `liquidate-loan` message.
 You can test the liquidation message now. Start your chain and reset the state of the app:
 
 ```bash
-ignite chain serve -r
+baseclass chain serve -r
 ```
 
 Set the deadline for the loan request to 1 block:
@@ -804,7 +804,7 @@ After a loan request has been made and not been approved, the `borrower` must be
 Scaffold the message for `cancel-loan`:
 
 ```bash
-ignite s message cancel-loan id:uint
+baseclass s message cancel-loan id:uint
 ```
 
 * Only the `borrower` can cancel a loan request.
@@ -859,7 +859,7 @@ func (k msgServer) CancelLoan(goCtx context.Context, msg *types.MsgCancelLoan) (
 Test the changes for cancelling a loan request:
 
 ```bash
-ignite chain serve -r
+baseclass chain serve -r
 ```
 
 ```bash

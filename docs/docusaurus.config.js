@@ -17,8 +17,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "ignite",
-  projectName: "ignite docs",
+  organizationName: "baseclass",
+  projectName: "baseclass docs",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -56,7 +56,7 @@ const config = {
     ({
       image: "img/og-image.jpg",
       announcementBar: {
-        content: '<a target="_blank" rel="noopener noreferrer" href="https://ignite.com">← Back to Ignite</a>',
+        content: '<a target="_blank" rel="noopener noreferrer" href="https://baseclass.com">← Back to Ignite</a>',
         isCloseable: false,
       },
       docs: {
@@ -201,7 +201,7 @@ const config = {
       algolia: {
         appId: "VVETP7QCVE",
         apiKey: "a9c466699c13052d35581030138f9fdc",
-        indexName: "ignite-cli",
+        indexName: "baseclass-cli",
         contextualSearch: false,
       },
     }),

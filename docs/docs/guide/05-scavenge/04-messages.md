@@ -23,7 +23,7 @@ The submit scavenge message must contain all the information that is required to
 Use the `ignite scaffold message` command to scaffold a new Cosmos SDK message for your module. The command accepts the message name as the first argument and a list of fields. By default, a message is scaffolded in a module with a name that matches the name of the project, in our case `scavenge`. You can use a flag to overwrite this default naming behavior.
 
 ```bash
-ignite scaffold message submit-scavenge solutionHash description reward
+baseclass scaffold message submit-scavenge solutionHash description reward
 ```
 
 The command creates and modifies several files:
@@ -119,7 +119,7 @@ The commit solution message requires the following fields:
 * Solution scavenger hash - the hash of the combination of the solution and the person who solved it
 
 ```bash
-ignite scaffold message commit-solution solutionHash solutionScavengerHash
+baseclass scaffold message commit-solution solutionHash solutionScavengerHash
 ```
 
 Because you're using the same `ignite scaffold message` command, the set of modified and created files is the same:
@@ -145,7 +145,7 @@ The reveal solution message requires only one field:
 * Solution - the plain text version of the solution
 
 ```bash
-ignite scaffold message reveal-solution solution
+baseclass scaffold message reveal-solution solution
 ```
 
 Again, because you're using the same `ignite scaffold message` command, the set of modified and created files is the same for the `reveal-solution` message.

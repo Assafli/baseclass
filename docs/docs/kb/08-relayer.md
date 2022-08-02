@@ -31,7 +31,7 @@ If you previously used the Ignite CLI relayer, follow these steps to remove exis
 2. Delete previous configuration files:
 
     ```bash
-    rm -rf ~/.ignite/relayer
+    rm -rf ~/.baseclass/relayer
     ```
 
 3. Restart your blockchains.
@@ -41,7 +41,7 @@ If you previously used the Ignite CLI relayer, follow these steps to remove exis
 All values can be passed with flags.
 
 ```bash
-ignite relayer configure --advanced --source-rpc "http://0.0.0.0:26657" --source-faucet "http://0.0.0.0:4500" --source-port "blog" --source-version "blog-1" --target-rpc "http://0.0.0.0:26659" --target-faucet "http://0.0.0.0:4501" --target-port "blog" --target-version "blog-1"
+baseclass relayer configure --advanced --source-rpc "http://0.0.0.0:26657" --source-faucet "http://0.0.0.0:4500" --source-port "blog" --source-version "blog-1" --target-rpc "http://0.0.0.0:26659" --target-faucet "http://0.0.0.0:4501" --target-port "blog" --target-version "blog-1"
 ```
 
 ## Connect blockchains and watch for IBC packets

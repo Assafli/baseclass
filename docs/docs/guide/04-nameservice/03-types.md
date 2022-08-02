@@ -24,7 +24,7 @@ Use the `ignite scaffold map` command to scaffold the `whois` type and create th
 In this example, the `whois` type is stored in a map-like data structure:
 
 ```bash
-ignite scaffold map whois name value price owner --no-message
+baseclass scaffold map whois name value price owner --no-message
 ```
 
 where:

@@ -21,7 +21,7 @@ message SellOrderPacketData {
 Now, use Ignite CLI to build the proto files for the `send-sell-order` command. You used this command in a previous chapter. 
 
 ```bash
-ignite generate proto-go --yes
+baseclass generate proto-go --yes
 ```
 
 ## Message Handling in SendSellOrder

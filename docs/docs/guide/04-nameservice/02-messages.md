@@ -78,7 +78,7 @@ Use the `ignite scaffold message` command to scaffold new messages for your modu
 To create the `MsgBuyName` message for the nameservice module:
 
 ```bash
-ignite scaffold message buy-name name bid
+baseclass scaffold message buy-name name bid
 ```
 
 where:
@@ -163,7 +163,7 @@ These are the changes for each one of these files:
 To create the `MsgSetName` for the nameservice module:
 
 ```bash
-ignite scaffold message set-name name value
+baseclass scaffold message set-name name value
 ```
 
 where:
@@ -181,7 +181,7 @@ You need a message so that an end user can delete a name that belongs to them.
 To create the `MsgDeleteName` for the nameservice module:
 
 ```bash
-ignite scaffold message delete-name name
+baseclass scaffold message delete-name name
 ```
 
 where:

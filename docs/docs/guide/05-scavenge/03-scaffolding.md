@@ -9,7 +9,7 @@ Scaffold a new Cosmos SDK blockchain using the `ignite scaffold chain` command.
 By default a chain is scaffolded with a new empty Cosmos SDK module. Use the `--no-module` flag to skip module scaffolding.
 
 ```bash
-ignite scaffold chain scavenge --no-module
+baseclass scaffold chain scavenge --no-module
 ```
 
 This command creates a new `scavenge` directory with a brand new Cosmos SDK blockchain. This blockchain doesn't have any application-specific logic yet, but it imports standard Cosmos SDK modules, such as `auth`, `bank`, `mint`, and others.
@@ -32,7 +32,7 @@ Scaffold a new module called `scavenge`. Based on the game design, the `scavenge
 - Use the optional `--dep` flag to specify the `bank` module.
 
 ```bash
-ignite scaffold module scavenge --dep bank
+baseclass scaffold module scavenge --dep bank
 ```
 
 This command creates the `x/scavenge` directory and imports the scavenge module into the blockchain in the `app/app.go` directory.

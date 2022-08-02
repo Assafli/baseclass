@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [ consecutiveness ]
     env:
-      working-directory: go/src/github.com/ignite/cli
+      working-directory: go/src/github.com/baseclass/cli
 
     steps:
       - uses: actions/checkout@v2
@@ -42,7 +42,7 @@ jobs:
         with:
           tag: v0.0.0-nightly
           name: nightly
-          body: "Install and move the CLI to your bin directory: `curl https://get.ignite.com/cli@v0.0.0-nightly! | bash`"
+          body: "Install and move the CLI to your bin directory: `curl https://get.baseclass.com/cli@v0.0.0-nightly! | bash`"
           prerelease: true
 
       - name: Set up Go

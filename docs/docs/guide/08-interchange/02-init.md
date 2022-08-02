@@ -14,7 +14,7 @@ In this chapter, you create the basic blockchain module for the interchain excha
 Scaffold a new blockchain called `interchange`:
 
 ```bash
-ignite scaffold chain interchange --no-module
+baseclass scaffold chain interchange --no-module
 ```
 
 A new directory named `interchange` is created. 
@@ -38,7 +38,7 @@ Scaffold a module inside your blockchain named `dex` with IBC capabilities.
 The dex module contains the logic to create and maintain order books and route them through IBC to the second blockchain.
 
 ```bash
-ignite scaffold module dex --ibc --ordering unordered --dep bank
+baseclass scaffold module dex --ibc --ordering unordered --dep bank
 ```
 
 ## Create CRUD logic for Buy and Sell Order Books
@@ -48,8 +48,8 @@ Scaffold two types with create, read, update, and delete (CRUD) actions.
 Run the following Ignite CLI `type` commands to create `sellOrderBook` and `buyOrderBook` types:
 
 ```bash
-ignite scaffold map sell-order-book amountDenom priceDenom --no-message --module dex
-ignite scaffold map buy-order-book amountDenom priceDenom --no-message --module dex
+baseclass scaffold map sell-order-book amountDenom priceDenom --no-message --module dex
+baseclass scaffold map buy-order-book amountDenom priceDenom --no-message --module dex
 ```
 
 The values are:
@@ -70,9 +70,9 @@ Create three packets for IBC:
 - A buy order `buyOrder`
 
 ```bash
-ignite scaffold packet create-pair sourceDenom targetDenom --module dex
-ignite scaffold packet sell-order amountDenom amount:int priceDenom price:int --ack remainingAmount:int,gain:int --module dex
-ignite scaffold packet buy-order amountDenom amount:int priceDenom price:int --ack remainingAmount:int,purchase:int --module dex
+baseclass scaffold packet create-pair sourceDenom targetDenom --module dex
+baseclass scaffold packet sell-order amountDenom amount:int priceDenom price:int --ack remainingAmount:int,gain:int --module dex
+baseclass scaffold packet buy-order amountDenom amount:int priceDenom price:int --ack remainingAmount:int,purchase:int --module dex
 ```
 
 The optional `--ack` flag defines field names and types of the acknowledgment returned after the packet has been received by the target chain. The value of the `--ack` flag is a comma-separated list of names (no spaces). Append optional types after a colon (`:`).

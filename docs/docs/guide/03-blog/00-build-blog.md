@@ -35,7 +35,7 @@ First, create a new blockchain.
 Open a terminal and navigate to a directory where you have permissions to create files. To create your Cosmos SDK blockchain, run this command:
 
 ```bash
-ignite scaffold chain blog
+baseclass scaffold chain blog
 ```
 
 The `blog` directory is created with the default directory structure.
@@ -59,7 +59,7 @@ cd blog
 To create a message type and its handler, use the `message` command:
 
 ```bash
-ignite scaffold message createPost title body
+baseclass scaffold message createPost title body
 ```
 
 The `message` command accepts message name (`createPost`) and a list of fields (`title` and `body`) as arguments.
@@ -322,7 +322,7 @@ Now that you have added the functionality to create posts and broadcast them to 
 To display posts, scaffold a query:
 
 ```bash
-ignite scaffold query posts --response title,body
+baseclass scaffold query posts --response title,body
 ```
 
 Two components are responsible for querying data:
@@ -450,13 +450,13 @@ Now that you have implemented logic for creating and querying posts, you can int
 First, start the chain on your development machine by running the following command in the `blog` directory:
 
 ```bash
-ignite chain serve
+baseclass chain serve
 ```
 
 The binary is built by the `ignite chain serve` command bit it can also be built by running:
 
 ```bash
-ignite chain build
+baseclass chain build
 ```
 
 To create a post at the command line:

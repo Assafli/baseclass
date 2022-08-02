@@ -83,7 +83,7 @@ Finally...
 To verify the version of Ignite CLI that is installed, run the following command:
 
 ```sh
-ignite --version
+baseclass --version
 ```
 
 You'll see release details like the following output:

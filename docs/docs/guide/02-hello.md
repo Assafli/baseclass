@@ -26,7 +26,7 @@ Are you ready? Open a terminal window and navigate to a directory where you have
 To create your blockchain with the default directory structure, run this command:
 
 ```bash
-ignite scaffold chain hello
+baseclass scaffold chain hello
 ```
 
 This command creates a Cosmos SDK blockchain called hello in a `hello` directory. The source code inside the `hello` directory contains a fully functional ready-to-use blockchain.
@@ -43,7 +43,7 @@ You can get help on any command. Now that you have run your first command, take 
 To learn about the command you just used, run:
 
 ```bash
-ignite scaffold --help
+baseclass scaffold --help
 ```
 
 ## Blockchain directory structure
@@ -75,7 +75,7 @@ Now you can get your blockchain up and running locally on a single node.
 You already have a fully-functional blockchain. To start your chain on your development machine, run the following command in the `hello` directory
 
 ```bash
-ignite chain serve
+baseclass chain serve
 ```
 
 This command downloads dependencies and compiles the source code into a binary called `hellod`. By default, the binary name is the name of the repo + `d`. From now on, use this `hellod` binary to run all of your chain commands. For example, to initialize a single validator node and start a node.
@@ -127,7 +127,7 @@ In a different terminal window, run the commands in your `hello` directory.
 Create a `hello` query:
 
 ```bash
-ignite scaffold query hello --response text
+baseclass scaffold query hello --response text
 ```
 
 `query` accepts a name of the query (in this case, `hello`), an optional list of request parameters (in this case, empty), and an optional comma-separated list of response fields with a `--response` flag (in this case, `text`).

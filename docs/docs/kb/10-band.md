@@ -22,7 +22,7 @@ BandChain oracle queries can be scaffolded only in IBC modules.
 The basic syntax to scaffold a band oracle module is:
 
 ```bash
-ignite scaffold band [queryName] --module [moduleName]
+baseclass scaffold band [queryName] --module [moduleName]
 ```
 
 Customize your band oracle with flags:
@@ -50,20 +50,20 @@ When you scaffold a BandChain oracle module, the following files and directories
 First, scaffold a chain but don't scaffold a default module:
 
 ```bash
-ignite scaffold chain github.com/username/oracle --no-module 
+baseclass scaffold chain github.com/username/oracle --no-module 
 ```
 
 Next, change to the new `oracle` directory and scaffold an IBC-enabled module named `consuming`:
 
 ```bash
 cd oracle 
-ignite scaffold module consuming --ibc
+baseclass scaffold module consuming --ibc
 ```
 
 Finally, scaffold a BandChain query oracle that can request real-time data:
 
 ```bash
-ignite scaffold band coinRates --module consuming
+baseclass scaffold band coinRates --module consuming
 ```
 
 So far, you have scaffolded:
@@ -92,7 +92,7 @@ const (
 To run the chain from the `oracle` directory:
 
 ```shell
-ignite chain serve
+baseclass chain serve
 ```
 
 Keep this terminal window open.
@@ -105,7 +105,7 @@ If you previously used the Ignite CLI relayer, it is a good idea to remove exist
 2. Delete previous configuration files:
 
     ```bash
-    rm -rf ~/.ignite/relayer
+    rm -rf ~/.baseclass/relayer
     ```
 
 3. Restart your blockchains.
@@ -113,7 +113,7 @@ If you previously used the Ignite CLI relayer, it is a good idea to remove exist
 In another terminal tab, configure the [Ignite CLI relayer](./08-relayer.md):
 
 ```bash
-ignite relayer configure -a \
+baseclass relayer configure -a \
 --source-rpc "http://rpc-laozi-testnet4.bandchain.org:80" \
 --source-faucet "https://laozi-testnet4.bandchain.org/faucet" \
 --source-port "oracle" \
@@ -154,7 +154,7 @@ The command output confirms the relayer is successfully configured:
 Connect the relayer:
 
 ```bash
-ignite relayer connect
+baseclass relayer connect
 ```
 
 You can see the paths of the `oracle` port on the testnet and the `consuming` port on your local oracle module in the relayer connection status that is output to the terminal:
@@ -204,7 +204,7 @@ You can scaffold multiples oracles by module. After scaffold, you must change th
 To create an example for the [gold price](https://laozi-testnet4.cosmoscan.io/oracle-script/33#bridge) bridge:
 
 ```shell
-ignite scaffold band goldPrice --module consuming
+baseclass scaffold band goldPrice --module consuming
 ```
 
 In the `proto/consuming/gold_price.proto` file:

@@ -1,9 +1,9 @@
 image:
   file: .gitpod.Dockerfile
 
-checkoutLocation: "ignite"
+checkoutLocation: "baseclass"
 
-workspaceLocation: "./ignite/.gitpod"
+workspaceLocation: "./baseclass/.gitpod"
 
 tasks:
   - name: Open the Readme

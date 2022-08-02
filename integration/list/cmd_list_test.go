@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ignite/cli/ignite/pkg/cmdrunner/step"
+	"github.com/ignite/cli/baseclass/pkg/cmdrunner/step"
 	envtest "github.com/ignite/cli/integration"
 )
 

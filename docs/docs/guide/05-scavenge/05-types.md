@@ -17,7 +17,7 @@ Use the `ignite scaffold map` command to scaffold the `scavenge` type and the co
 The first argument is the name of the type to create (`scavenge`), the rest is a list of fields. By default, generic CRUD messages are scaffolded. However, since you already created messages specifically for this scavenge blockchain, use the `--no-message` flag to skip message creation.
 
 ```bash
-ignite scaffold map scavenge solutionHash solution description reward scavenger --no-message
+baseclass scaffold map scavenge solutionHash solution description reward scavenger --no-message
 ```
 
 The `ignite scaffold map` command creates and modifies several files:
@@ -121,7 +121,7 @@ Review the update for `GetScavenge` that selects a store using the scavenge pref
 Use `ignite scaffold map` to create the same logic for a `commit` type.
 
 ```bash
-ignite scaffold map commit solutionHash solutionScavengerHash --no-message
+baseclass scaffold map commit solutionHash solutionScavengerHash --no-message
 ```
 
 ## Save changes

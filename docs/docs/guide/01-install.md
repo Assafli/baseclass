@@ -31,7 +31,7 @@ Ignite CLI is written in the Go programming language. To use Ignite CLI on a loc
 To verify the version of Ignite CLI you have installed, run the following command:
 
 ```sh
-ignite version
+baseclass version
 ```
 
 ## Installing Ignite CLI
@@ -57,13 +57,13 @@ curl https://get.ignite.com/cli | bash
 Then run this command to move the `ignite` executable to `/usr/local/bin/`:
 
 ```bash
-sudo mv ignite /usr/local/bin/
+sudo mv baseclass /usr/local/bin/
 ```
 
 On some machines, a permissions error occurs:
 
 ```bash
-mv: rename ./ignite to /usr/local/bin/ignite: Permission denied
+mv: rename ./baseclass to /usr/local/bin/baseclass: Permission denied
 ============
 Error: mv failed
 ```

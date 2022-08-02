@@ -371,13 +371,13 @@ init:
 Open a terminal window and run the following command to start the `earth` blockchain:
 
 ```bash
-ignite chain serve -c earth.yml
+baseclass chain serve -c earth.yml
 ```
 
 Open a different terminal window and run the following command to start the `mars` blockchain:
 
 ```bash
-ignite chain serve -c mars.yml
+baseclass chain serve -c mars.yml
 ```
 
 ### Remove Existing Relayer and Ignite CLI Configurations
@@ -387,7 +387,7 @@ If you previously used the relayer, follow these steps to remove exiting relayer
 - Stop your blockchains and delete previous configuration files:
 
     ```bash
-    rm -rf ~/.ignite/relayer
+    rm -rf ~/.baseclass/relayer
     ```
 
 If existing relayer configurations do not exist, the command returns `no matches found` and no action is taken.
@@ -397,7 +397,7 @@ If existing relayer configurations do not exist, the command returns `no matches
 First, configure the relayer. Use the Ignite CLI `configure` command with the `--advanced` option:
 
 ```bash
-ignite relayer configure -a \
+baseclass relayer configure -a \
   --source-rpc "http://0.0.0.0:26657" \
   --source-faucet "http://0.0.0.0:4500" \
   --source-port "blog" \
@@ -439,7 +439,7 @@ Setting up chains
 In a new terminal window, start the relayer process:
 
 ```bash
-ignite relayer connect
+baseclass relayer connect
 ```
 
 Results:

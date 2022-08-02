@@ -9,11 +9,11 @@ In this browser-based development environment, the terminal window is in the low
 To create a blockchain and start a node in development:
 
 ```bash
-ignite scaffold chain github.com/username/mars
+baseclass scaffold chain github.com/username/mars
 
 cd mars
 
-ignite chain serve
+baseclass chain serve
 ```
 
 where:

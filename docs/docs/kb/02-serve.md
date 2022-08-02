@@ -15,7 +15,7 @@ Blockchains are decentralized applications.
 Switch to the directory that contains a blockchain that was scaffolded with Ignite CLI. To start the blockchain node, run the following command:
 
 ```bash
-ignite chain serve
+baseclass chain serve
 ```
 
 This command initializes a chain, builds the code, starts a single validator node, and starts watching for file changes.

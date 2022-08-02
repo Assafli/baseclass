@@ -10,9 +10,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ignite/cli/ignite/chainconfig"
-	"github.com/ignite/cli/ignite/pkg/confile"
-	"github.com/ignite/cli/ignite/pkg/randstr"
+	"github.com/ignite/cli/baseclass/chainconfig"
+	"github.com/ignite/cli/baseclass/pkg/confile"
+	"github.com/ignite/cli/baseclass/pkg/randstr"
 	envtest "github.com/ignite/cli/integration"
 )
 
